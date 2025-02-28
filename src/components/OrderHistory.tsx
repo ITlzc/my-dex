@@ -26,8 +26,8 @@ export default function OrderHistory() {
     }, [])
 
     if(isPending) return <p>Loading...</p>
-    if(isError) return <p>Error: {error.message}</p>
-    if(isSuccess && data && data.length === 0) return <p>No open orders</p>
+    // if(isError) return <p>Error: {error.message}</p>
+    // if(isSuccess && data && data.length === 0) return <p>No open orders</p>
 
     const orderData = isSuccess && data && data.data.data
     console.log(orderData)
