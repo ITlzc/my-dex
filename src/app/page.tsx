@@ -382,9 +382,9 @@ function Page() {
               <div className="relative mt-4 flex h-[234px] w-full flex-col rounded bg-black p-4 md:mt-0 md:h-full md:p-4">
                 <div className="flex items-center">
                   <div className="flex w-2/4 gap-x-4">
-                    <div className={`cursor-pointer  rounded text-center text-[14px] font-bold text-gray-200 transition-all hover:text-white ${currentTable === 1 && 'text-primary'}`} onClick={() => setCurrentTable(1)}>Open Orders (0)</div>
-                    <div className={`cursor-pointer  rounded text-center text-[14px] font-bold text-gray-200 transition-all hover:text-white ${currentTable === 2 && 'text-primary'}`} onClick={() => setCurrentTable(2)}>Order History (0)</div>
-                    <div className={`cursor-pointer  rounded text-center text-[14px] font-bold text-gray-200 transition-all hover:text-white ${currentTable === 3 && 'text-primary'}`} onClick={() => setCurrentTable(3)}>Trade History (0)</div>
+                    <div className={`cursor-pointer  rounded text-center text-[14px] font-bold text-[#909090] transition-all hover:text-white ${currentTable === 1 && 'text-white'}`} onClick={() => setCurrentTable(1)}>Open Orders (0)</div>
+                    <div className={`cursor-pointer  rounded text-center text-[14px] font-bold text-[#909090] transition-all hover:text-white ${currentTable === 2 && 'text-white'}`} onClick={() => setCurrentTable(2)}>Order History (0)</div>
+                    <div className={`cursor-pointer  rounded text-center text-[14px] font-bold text-[#909090] transition-all hover:text-white ${currentTable === 3 && 'text-white'}`} onClick={() => setCurrentTable(3)}>Trade History (0)</div>
                   </div>
 
                   <div className="flex w-2/4 items-center justify-end gap-x-4">

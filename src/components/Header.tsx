@@ -16,23 +16,33 @@ function Page() {
       refetch(); // 每隔 3 秒触发一次请求
     }, 3000);
 
+    if(error instanceof Error) clearInterval(intervalId);
+
     // 清除定时器，防止内存泄漏
     return () => {
       clearInterval(intervalId);
     };
-  }, [refetch]);
+  }, [refetch, error]);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  if (error instanceof Error) {
-    return <div>Error: {error.message}</div>;
-  }
+  // if (error instanceof Error) {
+  //   return <div>Error: {error.message}</div>;
+  // }
 
   const pairList = pairListData?.data.data;
 
-  let statData = data?.data.data[0];
+  let statData = data?.data.data[0] || {
+    pair: '',
+    price: '0.00',
+    high: '0.00',
+    low: '0.00',
+    base_volume: '0.00',
+    quote_volume: '0.00',
+    change: '0.00',
+  };
 
   console.log(statData)
 
