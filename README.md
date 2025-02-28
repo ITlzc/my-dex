@@ -1,1 +1,2 @@
-# my-dex
+# dexchain-frontend
+dexchain-frontend
